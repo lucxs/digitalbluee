@@ -1,0 +1,32 @@
+
+
+section{
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* 1fr significa que se divide dos veces por la totalidad del ancho. */
+/*Auto-fit: */
+gap: 1rem; /* o un remm que viene de root o raiz equivalente al font size del elemento raiz, que es el html, que es por defecto 16px*/
+grid-auto-rows: 240px;
+font-size: 1rem;
+}
+
+
+@media(min-width:768px){
+
+.card-alto{
+    grid-row: span 2 /auto; /*ocupa dos espacios por ubicación automatica*/
+
+}
+
+.card-ancho {
+
+
+    grid-column: span 2 / auto;
+}
+
+.card-muyAncho{
+
+    grid-column: span 3 / auto;
+}
+
+}

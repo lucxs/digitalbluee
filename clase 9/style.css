@@ -1,0 +1,85 @@
+*{
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0; /*En 0 se le quitan todos los margenes*/
+    padding: 0; /*En 0 se le quitan todos los padings*/
+    
+
+}
+
+ul {
+
+    background-color: cornflowerblue;
+    display: flex; /*Para que se muestre hacia el costado, */
+    list-style: none; /*Para que se borren los puntitos*/
+    /*border-radius: 10px; /*darle un borde redondeado*/
+    box-shadow: 0.2px 0.2px 15px;/*Darle una sombra*/
+
+}
+
+ul li {
+
+      padding: 1rem;  /*Darle un espacio*/
+
+}
+
+li:hover {
+
+    background-color: rgb(123, 179, 123);
+    transition: 500ms;
+}
+
+a /*:hover*/ { /*Que es lo que va a pasar cuando pongas el mouse encima*/
+
+text-decoration: none;
+color: black;
+
+}
+
+.menu {
+
+    display: none;
+    cursor: pointer;
+}
+
+div {
+
+    display: none;
+}
+
+@media (max-width:768px){  /*Establecemos un punto de quiebre ante la disminución del tamaño del navegador, se establece el maximo del ancho, con las siguientes propiedades.*/
+
+    body{
+background-color: black;
+transition: 700ms;
+
+        }
+
+        ul {
+
+            display: none; /*Para que se muestre hacia el costado*/
+            flex-direction: column;
+            text-align: center;
+        
+        }
+
+        .menu {
+
+            display: block;
+        }
+
+        div{
+            display: flex;
+            padding: 10px;
+            justify-content: end;
+            background-color: white;
+        }
+
+}
+
+.verse{
+
+    display: block;
+
+
+}

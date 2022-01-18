@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+  }
+  
+  main {
+    margin: auto;
+    height: 100vh;
+    max-width: 1000px;
+    display: grid; /* creo una grilla, GRID con los elementos que estan contenidos por el main */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* etablezco la cantidad de columnas con sus respectivos anchos */
+    grid-template-rows: minmax(40px,1fr) 1.5fr 5fr 2fr;
+    grid-template-areas:
+      "header header header header"
+      "uno dos tres sidebar"
+      "contenido contenido contenido sidebar"
+      "footer footer footer footer";
+    background-color: cadetblue;
+    gap: 15px;
+  }
+  
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(55, 92, 93);
+  }
+  
+  .header {
+    grid-area: header;
+  }
+  .uno {
+    grid-area: uno;
+  }
+  .dos {
+    grid-area: dos;
+  }
+  
+  .tres {
+    grid-area: tres;
+  }
+  .contenido {
+    grid-area: contenido;
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  @media  screen and (max-width:600px){
+
+    main {
+        grid-template-areas:
+          "header header header header"
+          "uno uno uno uno"
+          "dos dos dos dos"
+          "tres tres tres tres"
+          "contenido contenido contenido contenido"
+          "sidebar sidebar sidebar sidebar"
+          "footer footer footer footer";
+        grid-template-rows: 50px 100px 100px 100px 500px 50px 70px;
+      }
+
+  }

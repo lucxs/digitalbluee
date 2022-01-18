@@ -1,0 +1,73 @@
+
+
+
+body{margin: 0;}/*le decimos que no tenga ningun tipo de margen externo*/
+/*Primero accedo al elemento que los envuelve al main*/
+main{
+
+        margin: auto;
+        display: grid;  /*Esto significa que todo lo que está dentro pertenece al grid, a la grilla*/
+        width: 900px; /*Defino el ancho de todo el main, el ancho total*/
+        /*Ahora creamos las filas y las columnas*/
+        grid-template-columns: 1fr 1fr 1fr; /*Divido las tres columnas fraccionados sobre el valor total del ancho*/
+        grid-template-rows: 60px 40px 70px 500px 70px;
+        background-color: rgb(52, 52, 194);
+        gap: 10px; /*La separación que puede haber entre cada elemento*/
+        grid-template-areas: "logo logo logo"
+                            " nav nav nav"
+                            "header header header"
+                             "sidebar section section"
+                             "footer footer footer"   
+                                            ;
+}
+
+div {
+    /*Los elementos que estan dentro*/
+
+    background-color: rgb(101, 101, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+
+
+ grid-area: logo ;
+
+}
+
+.nav {
+
+
+    grid-area: nav ;
+   
+   }
+
+   .header {
+
+
+    grid-area: header ;
+   
+   }
+
+   .sidebar {
+
+
+    grid-area: sidebar ;
+   
+   }
+
+   .section {
+
+
+    grid-area: section ;
+   
+   }
+
+   .footer {
+
+
+    grid-area: footer ;
+   
+   }
